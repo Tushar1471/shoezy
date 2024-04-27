@@ -20,6 +20,8 @@ section {
     background-image: url(images/bg1.png);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 section nav {
@@ -58,7 +60,7 @@ section nav ul li a {
     color: white;
     font-size: 20px;
     font-weight: 500;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 section nav ul li a:hover {
@@ -70,12 +72,12 @@ section nav ul li a:after {
     position: absolute;
     width: 100%;
     left: 0;
-    bottom: -6px;
+    bottom: -20px;
     height: 2px;
-    background: #eee;
+    background-color: #eee;
     transform: scale(0);
     transform-origin: right;
-    transition: transform .10s;
+    transition: transform 0.1s;
 }
 
 section nav ul li a:hover::after {
@@ -99,51 +101,49 @@ section nav .icons i:hover {
 }
 
 section .main .main-content {
+    width: 100%;
+    height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
+}
+
+section .main .main-content .main-text {
+    width: 500px;
+    position: relative;
+    top: 85px;
 }
 
 section .main .main-content .main-text h1 {
     font-size: 90px;
     line-height: 70px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
     background: linear-gradient(to right, #c72092, #6c14d0);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    position: relative;
-    top: 45px;
-    left: 5%;
 }
 
 section .main .main-content .main-text h1 span {
     font-size: 70px;
     background: linear-gradient(to right, #c72092, #6c14d0);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 section .main .main-content .main-text p {
-    width: 600px;
     text-align: justify;
-    line-height: 19px;
-    position: relative;
-    top: 85px;
-    left: 5%;
+    line-height: 20px;
+    margin-top: 5px;
 }
 
 section .main .main-content .main-image img {
-    width: 800px;
+    width: 450px;
     position: relative;
-    top: 75px;
-    left: 20px;
+    left: 5px;
+    transform: rotate(5deg);
 }
-
-
-/* section .main .main-content .main-image img:hover {
-    transform: rotate(360deg);
-    transition: 10s;
-} */
 
 section .main .social-icon {
     position: absolute;
@@ -156,7 +156,7 @@ section .main .social-icon {
 section .main .social-icon i {
     margin: 5px 0;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 section .main .social-icon i:hover {
@@ -179,14 +179,14 @@ section .main .button a {
 section .main .button i {
     color: #eee;
     margin-left: 5px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 section .main .button:hover i {
     transform: translateX(6px);
 }
 
-
+*/
 /*SECTION ENDS HERE*/
 
 
@@ -194,7 +194,6 @@ section .main .button:hover i {
 
 .products {
     width: 100%;
-    height: 100%;
     padding: 35px 0;
 }
 
@@ -207,6 +206,7 @@ section .main .button:hover i {
     text-transform: uppercase;
     background: linear-gradient(to right, #c72092, #6c14d0);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -215,22 +215,23 @@ section .main .button:hover i {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 25px 0;
+    grid-gap: 10px 0;
 }
 
 .products .box .card {
-    width: 290px;
+    width: 280px;
     height: 400px;
     box-shadow: 0 0 8px #6c14d0;
     border-radius: 15px;
     text-align: center;
     padding: 10px 20px;
     background: #eee;
+    cursor: pointer;
 }
 
 .products .box .card:hover {
-    transform: scale(1.1);
-    transition: transform .35s;
+    transform: scale(0.9);
+    transition: transform 1s;
 }
 
 .products .box .card .smart_card {
@@ -239,7 +240,7 @@ section .main .button:hover i {
     position: absolute;
     margin: 20px 0;
     transform: translateX(-20px);
-    transition: 0.5s;
+    transition: 0.75s;
     opacity: 0;
 }
 
@@ -308,7 +309,6 @@ section .main .button:hover i {
 .about {
     width: 100%;
     height: 100vh;
-    padding: 35px 0;
 }
 
 .about h1 {
@@ -316,13 +316,14 @@ section .main .button:hover i {
     align-items: center;
     justify-content: center;
     font-size: 70px;
-    margin: 35px 0;
+    margin-top: 75px;
     text-transform: uppercase;
 }
 
 .about h1 span {
     background: linear-gradient(to right, #c72092, #6c14d0);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-left: 15px;
 }
@@ -350,7 +351,7 @@ section .main .button:hover i {
 }
 
 .about .about_main .about_image .about_small_image img {
-    height: 92px;
+    height: 70px;
     margin: 5px 5px;
     cursor: pointer;
     background: linear-gradient(to right, #c72092, #6c14d0);
@@ -358,7 +359,7 @@ section .main .button:hover i {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
     display: block;
     padding: 5px 5px;
-    transition: .5s;
+    transition: 0.5s;
     opacity: 0.8;
 }
 
@@ -367,14 +368,14 @@ section .main .button:hover i {
 }
 
 .about .about_main .about_image .image_container {
-    padding: 10px;
+    padding: 25px;
     display: flex;
 }
 
 .about .about_main .about_image .image_container img {
     border: 3px solid #6c14d0;
     border-radius: 20px;
-    height: 400px;
+    height: 300px;
     padding: 30px;
     box-shadow: 0 0 8px #6c14d0;
 }
@@ -386,6 +387,7 @@ section .main .button:hover i {
 .about .about_main .about_text p {
     background: linear-gradient(to left, #c72092, #6c14d0);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 20px;
     font-size: 15px;
@@ -408,7 +410,7 @@ section .main .button:hover i {
     padding: 10px 15px;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 5px #c72092;
-    transition: .8s;
+    transition: 0.8s;
 }
 
 .about .about_btn:hover {
@@ -426,7 +428,6 @@ section .main .button:hover i {
 .review {
     width: 100%;
     height: 100vh;
-    padding: 35px 0;
 }
 
 .review h1 {
@@ -441,11 +442,12 @@ section .main .button:hover i {
     margin-left: 15px;
     background: linear-gradient(to right, #c72092, #6c14d0);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .review .review_box {
-    width: 90%;
+    width: 95%;
     position: relative;
     top: 7%;
     display: flex;
@@ -461,7 +463,7 @@ section .main .button:hover i {
     overflow: hidden;
     margin: 5px 0;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .review .profile .profile_image:hover {
@@ -528,6 +530,7 @@ section .main .button:hover i {
 
 .services h1 {
     font-size: 60px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -538,6 +541,7 @@ section .main .button:hover i {
     margin-left: 15px;
     background: linear-gradient(to right, #c72092, #6c14d0);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -600,7 +604,7 @@ section .main .button:hover i {
 
 .login_form .right h1 {
     font-size: 50px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     margin-bottom: 30px;
     margin-top: 30px;
 }
@@ -794,7 +798,7 @@ footer .footer_main .tags .social_links a:hover i {
 }
 
 footer .footer_main .tags .social_links a::after {
-    content: '';
+    content: "";
     width: 100%;
     height: 100%;
     top: 0;
